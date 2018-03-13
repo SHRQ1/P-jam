@@ -1,0 +1,68 @@
+package javaapplication100;
+import java.util.Scanner;
+import java.lang.Math;
+/**
+ *
+ * @author WIN 7
+ */
+public class AlienNumericLanugage {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input =new Scanner(System.in);
+        String s=input.nextLine();
+        String [] a=new String [s.length()];
+        int counter=0;
+        for (int i=0;i<a.length;i++){
+            a[i]=s.substring(i);
+             counter++;}
+        int sum=0;
+         for (int j=0;j<a.length && counter>-1;j++){
+            
+            switch(a[j]){
+                case "$":
+                  sum=(int) (0*Math.pow(counter, 8));
+                  counter--;
+                  break;
+                case "!":
+                 sum=(int) (1*Math.pow(counter, 8));
+                  counter--;
+                  break;
+                case "*":
+                 sum=(int) (2*Math.pow(counter,8 ));
+                  counter--;
+                  break;
+                  case "~":
+                 sum=(int) (3*Math.pow(counter, 8));
+                  counter--;
+                  break;
+                  case "#":
+                 sum=(int) (4*Math.pow(counter, 8));
+                  counter--;
+                  break;
+                  case "%":
+                 sum=(int) (5*Math.pow(counter,8 ));
+                  counter--;
+                  break;
+                  case "[":
+                 sum=(int) (-1*Math.pow(counter,8 ));
+                  counter--;
+                  break;
+                  case "|":
+                 sum=(int)(-2*Math.pow(counter,8 ));
+                  counter--;
+                  break;
+            }        
+         }  
+       System.out.println(sum);
+                 
+                 
+                      
+       
+       
+        
+    
+}
+}
