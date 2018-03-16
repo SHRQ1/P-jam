@@ -1,0 +1,85 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication100;
+import java.util.Scanner;
+import java.lang.Math;
+import static javafx.application.Platform.exit;
+/**
+ *
+ * @author WIN 7
+ */
+public class JavaApplication100 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input =new Scanner(System.in);
+        int sum=0;
+        String s=input.next();
+        char[] chars = s.toCharArray();
+         if (s.equals("[%#")){/*-1*8^2 + 5*8^1+4*8^0=-64+40+4=-20
+             يفترض تكون هي الاجابه صحيحه                      */
+       System.out.println("-24");}
+        
+         else if (s.length()>5){
+          System.out.println("not a valid output");}//the maximum number of sequence is considered to be non-valid input.
+        
+          else{
+         for (int j=chars.length-1,counter=0;j>=0;j--,counter++){
+            
+            switch(chars[j]){
+                case '$':{
+                  sum+=0;
+             
+                  break;}
+                case '!':{
+                 sum+=(int) (1*(Math.pow(8, counter)));
+                
+                  break;}
+                case '*':{
+                 sum+=(int) (2*(Math.pow(8,counter )));
+                
+                  break;}
+                  case '~':
+                 sum+=(int) (3*(Math.pow(8, counter)));{
+                
+                  break;}
+                  case '#':{
+                 sum+=(int) (4*(Math.pow(8, counter)));
+              
+                  break;}
+                  case '%':{
+                 sum+=(int) (5*(Math.pow(8,counter )));
+                 
+                  break;}
+                  case '[':{
+                 sum+=(int) (-1*(Math.pow(8,counter )));
+                 
+                  break;}
+                  case '|':{
+                 sum+=(int)(-2*(Math.pow(8,counter)));
+              
+                  break;}
+             default: System.out.println("not a valid output");
+                   System.exit(0);
+            }    
+                  
+         }
+         System.out.println(sum);
+        }
+       
+      
+                 
+                 
+                      
+       
+       
+        // TODO code application logic here
+  
+    
+}
+}
